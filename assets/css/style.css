@@ -71,6 +71,7 @@ body {
   margin-left: 12px;
   padding-left: 12px;
 }
+
 /* -----------------------------------
    ページ全体の基本レイアウト
 ----------------------------------- */
@@ -124,20 +125,34 @@ body {
   text-align: center;
 }
 
+/* Instagramアイコン */
 .insta-icon {
-  color: #E1306C; /* Instagramカラー */
+  color: #E1306C;
   text-decoration: none;
   display: inline-block;
   margin-top: 12px;
 }
+
 /* -----------------------------------
    ヘッダー画像（YouTubeバナー方式）
 ----------------------------------- */
 
 .header-image {
   width: 100%;
-  height: 40vh;          /* 必要なら 50vh などに調整できる */
-  object-fit: cover;     /* 枠に合わせてトリミング */
-  object-position: center; /* 上下左右を均等にトリミング（重要） */
+  height: 40vh;
+  object-fit: cover;
+  object-position: center;
   display: block;
+}
+
+/* -----------------------------------
+   フッター（著作権表記）
+----------------------------------- */
+
+.site-footer {
+  text-align: center;
+  padding: 24px 0 32px;
+  color: #777;
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
