@@ -341,5 +341,19 @@
   <!-- JS 読み込み -->
   <script src="assets/js/script.js"></script>
 
+  <!-- ここまでが本文 -->
+<script>
+function loadSection(targetId, file) {
+  fetch(file)
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById(targetId).innerHTML = html;
+    });
+}
+
+loadSection("chapter3-1", "chapter3-1.html");
+loadSection("chapter3-2", "chapter3-2.html");
+</script>
+  
 </body>
 </html>
