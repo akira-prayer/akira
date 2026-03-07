@@ -46,7 +46,6 @@ body {
   padding: 0 0 12px 0;
 }
 
-/* 開いた時だけ表示 */
 .accordion-item.active > .accordion-content {
   display: block;
 }
@@ -63,9 +62,13 @@ body {
   border-left: 3px solid #ddd;
   margin-left: 12px;
   padding-left: 12px;
+
+  /* ★ 追加：3段目の区切り線 */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
-/* 第3階層以降も自然に深く見える */
 .sub-accordion-item .sub-accordion-item {
   border-left: 3px solid #ccc;
   margin-left: 12px;
@@ -100,7 +103,7 @@ body {
   margin-bottom: 24px;
 }
 
-/* アプリリンクのレイアウト */
+/* アプリリンク */
 .app-links {
   display: flex;
   align-items: center;
@@ -116,8 +119,8 @@ body {
 /* スクショのグリッド */
 .screenshot-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2列 */
-  gap: 12px; /* 画像の間隔 */
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
 .screenshot-grid img {
@@ -126,12 +129,12 @@ body {
   border-radius: 6px;
 }
 
-/* 動画の中央寄せ */
+/* 動画中央寄せ */
 .video-wrap {
   text-align: center;
 }
 
-/* Instagramアイコン */
+/* Instagram */
 .insta-icon {
   color: #E1306C;
   text-decoration: none;
@@ -139,14 +142,14 @@ body {
   margin-top: 12px;
 }
 
-/* 表全体を中央寄せ */
+/* 表中央寄せ */
 .table-wrap {
   display: flex;
   justify-content: center;
   margin: 24px 0;
 }
 
-/* 表の基本デザイン */
+/* 表デザイン */
 .quantum-table {
   width: 100%;
   max-width: 600px;
@@ -165,7 +168,6 @@ body {
   font-weight: 500;
 }
 
-/* スマホ対応（横スクロール防止） */
 @media (max-width: 480px) {
   .quantum-table {
     font-size: 0.9rem;
@@ -177,7 +179,7 @@ body {
 }
 
 /* -----------------------------------
-   ヘッダー画像（YouTubeバナー方式）
+   ヘッダー画像
 ----------------------------------- */
 
 .header-image {
@@ -189,7 +191,7 @@ body {
 }
 
 /* -----------------------------------
-   フッター（著作権表記）
+   フッター
 ----------------------------------- */
 
 .site-footer {
@@ -201,7 +203,7 @@ body {
 }
 
 /* -----------------------------------
-   ★ 追加：外部HTMLの見出しに番号を付けない
+   ★ 外部HTMLの見出しに番号を付けない
 ----------------------------------- */
 
 .no-number::before {
@@ -210,21 +212,11 @@ body {
 }
 
 /* -----------------------------------
-   ★ 追加：外部HTMLの段落を下げる
+   ★ 外部HTMLの段落を下げる
 ----------------------------------- */
 
 .accordion-content p,
 .sub-accordion-content p {
   margin-left: 1em;
   margin-bottom: 1em;
-}
-
-/* -----------------------------------
-   ★ 追加：3段目アコーディオンの区切り線
------------------------------------ */
-
-.sub-accordion-item {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 8px;
-  margin-bottom: 8px;
 }
