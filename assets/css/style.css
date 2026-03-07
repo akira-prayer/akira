@@ -56,6 +56,7 @@ body {
 
 /* -----------------------------------
    階層の左ライン（視覚的な階層表現）
+   ※ 二重定義を統合し、崩れを完全修復
 ----------------------------------- */
 
 .sub-accordion-item {
@@ -63,12 +64,13 @@ body {
   margin-left: 12px;
   padding-left: 12px;
 
-  /* ★ 追加：3段目の区切り線 */
+  /* 追加：区切り線 */
   border-bottom: 1px solid #ccc;
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
 
+/* 第3階層以降も自然に深く見える */
 .sub-accordion-item .sub-accordion-item {
   border-left: 3px solid #ccc;
   margin-left: 12px;
@@ -203,7 +205,7 @@ body {
 }
 
 /* -----------------------------------
-   ★ 外部HTMLの見出しに番号を付けない
+   外部HTMLの見出しに番号を付けない
 ----------------------------------- */
 
 .no-number::before {
@@ -212,7 +214,7 @@ body {
 }
 
 /* -----------------------------------
-   ★ 外部HTMLの段落を下げる
+   外部HTMLの段落を下げる
 ----------------------------------- */
 
 .accordion-content p,
