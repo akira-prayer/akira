@@ -56,7 +56,6 @@ body {
 
 /* -----------------------------------
    階層の左ライン（視覚的な階層表現）
-   ※ 二重定義を統合し、崩れを完全修復
 ----------------------------------- */
 
 .sub-accordion-item {
@@ -64,7 +63,6 @@ body {
   margin-left: 12px;
   padding-left: 12px;
 
-  /* 追加：区切り線 */
   border-bottom: 1px solid #ccc;
   padding-bottom: 8px;
   margin-bottom: 8px;
@@ -151,7 +149,7 @@ body {
   margin: 24px 0;
 }
 
-/* 表デザイン */
+/* quantum-table（既存） */
 .quantum-table {
   width: 100%;
   max-width: 600px;
@@ -221,4 +219,26 @@ body {
 .sub-accordion-content p {
   margin-left: 1em;
   margin-bottom: 1em;
+}
+
+/* -----------------------------------
+   ★ 通常 table の自然な罫線（追加）
+----------------------------------- */
+
+.sub-accordion-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.sub-accordion-content th,
+.sub-accordion-content td {
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.sub-accordion-content th {
+  background: #f7f7f7;
+  font-weight: 500;
 }
