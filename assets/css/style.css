@@ -199,3 +199,32 @@ body {
   font-size: 0.85rem;
   line-height: 1.2;
 }
+
+/* -----------------------------------
+   ★ 追加：外部HTMLの見出しに番号を付けない
+----------------------------------- */
+
+.no-number::before {
+  content: "" !important;
+  counter-increment: none !important;
+}
+
+/* -----------------------------------
+   ★ 追加：外部HTMLの段落を下げる
+----------------------------------- */
+
+.accordion-content p,
+.sub-accordion-content p {
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+/* -----------------------------------
+   ★ 追加：3段目アコーディオンの区切り線
+----------------------------------- */
+
+.sub-accordion-item {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
