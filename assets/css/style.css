@@ -114,6 +114,12 @@ body {
 }
 
 /* スクショのグリッド */
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2列 */
+  gap: 12px; /* 画像の間隔 */
+}
+
 .screenshot-grid img {
   width: 100%;
   margin-bottom: 12px;
