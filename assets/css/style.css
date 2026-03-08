@@ -15,10 +15,11 @@ body {
   background: none;
   border: none;
   padding: 12px 0;
-  font-size: 1.1rem;
+  font-size: 1rem; /* ← Safari/Chrome 統一 */
   cursor: pointer;
   position: relative;
-  color: #000; /* ← Safari の青色を上書きして黒に統一 */
+  color: #000; /* Safari の青色を上書き */
+  font-weight: 500; /* 落ち着いた太さに統一 */
 }
 
 /* 三角アイコン（閉じている時） */
@@ -223,7 +224,17 @@ body {
 }
 
 /* -----------------------------------
-   ★ 通常 table の自然な罫線（追加）
+   外部HTMLの h3 を Safari/Chrome で統一
+----------------------------------- */
+
+.sub-accordion-content h3 {
+  font-size: 1rem; /* ← Safari の大きさを抑える */
+  margin: 12px 0 6px;
+  font-weight: 600;
+}
+
+/* -----------------------------------
+   ★ 通常 table の自然な罫線
 ----------------------------------- */
 
 .sub-accordion-content table {
