@@ -15,7 +15,7 @@ body {
   background: none;
   border: none;
   padding: 12px 0;
-  font-size: 1rem; /* ← Safari/Chrome 統一 */
+  font-size: 0.95rem; /* ← Safari/Chrome 統一 */
   cursor: pointer;
   position: relative;
   color: #000; /* Safari の青色を上書き */
