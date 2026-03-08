@@ -18,6 +18,7 @@ body {
   font-size: 1.1rem;
   cursor: pointer;
   position: relative;
+  color: #000; /* ← Safari の青色を上書きして黒に統一 */
 }
 
 /* 三角アイコン（閉じている時） */
