@@ -15,11 +15,11 @@ body {
   background: none;
   border: none;
   padding: 12px 0;
-  font-size: 0.95rem; /* ← Safari/Chrome 統一 */
+  font-size: 0.95rem;
   cursor: pointer;
   position: relative;
-  color: #000; /* Safari の青色を上書き */
-  font-weight: 500; /* 落ち着いた太さに統一 */
+  color: #000;
+  font-weight: 500;
 }
 
 /* 三角アイコン（閉じている時） */
@@ -46,6 +46,7 @@ body {
 .sub-accordion-content {
   display: none;
   padding: 0 0 12px 0;
+  overflow: visible; /* ← SNSアイコンが切れない */
 }
 
 .accordion-item.active > .accordion-content {
@@ -57,24 +58,28 @@ body {
 }
 
 /* -----------------------------------
-   階層の左ライン（視覚的な階層表現）
+   階層の左ライン
 ----------------------------------- */
 
-.sub-accordion-item {
-  border-left: 3px solid #ddd;
-  margin-left: 12px;
-  padding-left: 12px;
+.sub-accordion-content section {
+  margin-left: 4px;
+  padding-left: 8px;
+  border-left: 3px solid #ccc;
+}
 
+.sub-accordion-item {
+  border-left: 3px solid #ccc;
+  margin-left: 4px;
+  padding-left: 8px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
 
-/* 第3階層以降も自然に深く見える */
 .sub-accordion-item .sub-accordion-item {
   border-left: 3px solid #ccc;
-  margin-left: 12px;
-  padding-left: 12px;
+  margin-left: 4px;
+  padding-left: 8px;
 }
 
 /* -----------------------------------
@@ -151,7 +156,7 @@ body {
   margin: 24px 0;
 }
 
-/* quantum-table（既存） */
+/* quantum-table */
 .quantum-table {
   width: 100%;
   max-width: 600px;
@@ -168,16 +173,6 @@ body {
 .quantum-table th {
   background: #f5f5f5;
   font-weight: 500;
-}
-
-@media (max-width: 480px) {
-  .quantum-table {
-    font-size: 0.9rem;
-  }
-  .quantum-table th,
-  .quantum-table td {
-    padding: 8px 10px;
-  }
 }
 
 /* -----------------------------------
@@ -204,6 +199,28 @@ body {
   line-height: 1.2;
 }
 
+/* SNSアイコンの横並び（完全揃え） */
+.sns-icons {
+  margin-left: 1em; /* ← テキストと左位置を揃える */
+  margin-top: 12px;
+}
+
+.sns-icons a {
+  display: inline-block;
+  margin-right: 12px; /* ← 均等な間隔 */
+}
+
+.sns-icons a:last-child {
+  margin-right: 0;
+}
+
+.sns-icon {
+  width: 19px;   /* ← 表示サイズを統一 */
+  height: 19px;
+  vertical-align: middle; /* ← 高さズレ防止 */
+  display: inline-block;
+}
+
 /* -----------------------------------
    外部HTMLの見出しに番号を付けない
 ----------------------------------- */
@@ -224,17 +241,17 @@ body {
 }
 
 /* -----------------------------------
-   外部HTMLの h3 を Safari/Chrome で統一
+   外部HTMLの h3
 ----------------------------------- */
 
 .sub-accordion-content h3 {
-  font-size: 1rem; /* ← Safari の大きさを抑える */
+  font-size: 1rem;
   margin: 12px 0 6px;
   font-weight: 600;
 }
 
 /* -----------------------------------
-   ★ 通常 table の自然な罫線
+   通常 table の自然な罫線
 ----------------------------------- */
 
 .sub-accordion-content table {
